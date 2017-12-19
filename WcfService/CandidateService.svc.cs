@@ -1,11 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using WcfService.Entity;
 
 namespace WcfService
 {
     public class CandidateService : ICandidateService
     {
+        private readonly IRepository _repository;
+
+        public CandidateService(IRepository repository)
+        {
+            _repository = repository;
+        }
+
         public void AddCandidate(CandidateInfo candidate)
         {
             throw new NotImplementedException();
@@ -21,7 +27,12 @@ namespace WcfService
             throw new NotImplementedException();
         }
 
-        public List<CandidateInfo> GetAllCandidates()
+        public ushort GetCandidatesCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ushort GetTotalSalary()
         {
             throw new NotImplementedException();
         }

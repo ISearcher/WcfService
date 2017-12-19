@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ServiceModel;
+﻿using System.ServiceModel;
 using WcfService.Entity;
 
 namespace WcfService
@@ -17,6 +16,9 @@ namespace WcfService
         void UpdateCandidate(CandidateInfo candidate);
 
         [OperationContract]
-        List<CandidateInfo> GetAllCandidates();
+        ushort GetCandidatesCount();
+
+        [OperationContract]
+        ushort GetTotalSalary();
     }
 }
