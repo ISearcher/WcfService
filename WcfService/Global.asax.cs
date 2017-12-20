@@ -1,5 +1,7 @@
-﻿using Ninject;
+﻿using System.Data.Entity;
+using Ninject;
 using Ninject.Web.Common.WebHost;
+using WcfService.Entity;
 using WcfService.Utility;
 
 namespace WcfService
@@ -9,6 +11,17 @@ namespace WcfService
         protected override IKernel CreateKernel()
         {
             return new StandardKernel(new WcfNinjectModule());
+        }
+
+        protected override void OnApplicationStarted()
+        {
+            base.OnApplicationStarted();
+
+            Database.SetInitializer(new ServerInitializer());
+            using (var ctx = new DataContext())
+            {
+                ctx.Database.CreateIfNotExists();
+            }
         }
     }
 }

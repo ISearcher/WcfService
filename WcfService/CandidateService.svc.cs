@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.ServiceModel.Web;
 using WcfService.Entity;
 
 namespace WcfService
@@ -12,29 +12,16 @@ namespace WcfService
             _repository = repository;
         }
 
-        public void AddCandidate(CandidateInfo candidate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveCandidate(CandidateInfo candidate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateCandidate(CandidateInfo candidate)
-        {
-            throw new NotImplementedException();
-        }
-
+        [WebGet]
         public ushort GetCandidatesCount()
         {
-            throw new NotImplementedException();
+            return 42;
         }
 
+        [WebGet]
         public ushort GetTotalSalary()
         {
-            throw new NotImplementedException();
+            return 43;
         }
     }
 }

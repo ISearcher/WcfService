@@ -1,23 +1,17 @@
-﻿using System.Runtime.Serialization;
-
-namespace WcfService.Entity
+﻿namespace WcfService.Entity
 {
-    [DataContract]
     public class CandidateInfo
     {
-        [DataMember]
-        public string Name;
+        public int Id { get; set; }
 
-        [DataMember]
-        public string Surname;
+        public string Name { get; set; }
 
-        [DataMember]
-        public ushort Age;
+        public string Surname { get; set; }
 
-        [DataMember]
-        public ushort Salary;
+        public int Age { get; set; }
 
-        [DataMember]
-        public ushort Experience;
+        public int Salary { get; set; }
+
+        public int Experience { get; set; }
     }
 }
