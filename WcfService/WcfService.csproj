@@ -160,11 +160,13 @@
     <Compile Include="CandidateService.svc.cs">
       <DependentUpon>CandidateService.svc</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Candidates.cs" />
     <Compile Include="Entity\CandidateInfo.cs" />
-    <Compile Include="Entity\DataContext.cs" />
+    <Compile Include="Infrastructure\DataContext.cs" />
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
     <Compile Include="Entity\Repository.cs" />
-    <Compile Include="Entity\ServerInitializer.cs" />
+    <Compile Include="Infrastructure\ServerInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -2,7 +2,7 @@
 using System.Data.Entity.Migrations;
 using WcfService.Migrations;
 
-namespace WcfService.Entity
+namespace WcfService.Infrastructure
 {
     public class ServerInitializer : IDatabaseInitializer<DataContext>
     {

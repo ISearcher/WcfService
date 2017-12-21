@@ -1,15 +1,17 @@
+using WcfService.Infrastructure;
+
 namespace WcfService.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WcfService.Entity.DataContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(WcfService.Entity.DataContext context)
+        protected override void Seed(DataContext context)
         {
             //  This method will be called after migrating to the latest version.
 

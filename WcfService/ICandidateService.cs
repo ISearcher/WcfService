@@ -1,4 +1,5 @@
 ﻿using System.ServiceModel;
+using WcfService.Entity;
 
 namespace WcfService
 {
@@ -6,9 +7,18 @@ namespace WcfService
     public interface ICandidateService
     {
         [OperationContract]
-        ushort GetCandidatesCount();
+        int GetCandidatesCount();
 
         [OperationContract]
-        ushort GetTotalSalary();
+        int GetTotalSalary();
+
+        [OperationContract]
+        void AddCandidate(CandidateInfo candidate);
+
+        [OperationContract]
+        void RemoveCandidate(CandidateInfo candidate);
+
+        [OperationContract]
+        void UpdateCandidate(CandidateInfo candidate);
     }
 }

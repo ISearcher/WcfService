@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
+using WcfService.Entity;
 
-namespace WcfService.Entity
+namespace WcfService.Infrastructure
 {
     public class DataContext : DbContext
     {

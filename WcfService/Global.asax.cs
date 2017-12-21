@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using Ninject;
 using Ninject.Web.Common.WebHost;
-using WcfService.Entity;
+using WcfService.Infrastructure;
 using WcfService.Utility;
 
 namespace WcfService
